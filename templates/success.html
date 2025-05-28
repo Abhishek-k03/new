@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <title>Upload Success</title>
+    <title>Gemini Skill Gap Analysis Results</title>
 </head>
 
 <body>
-    <h1>Resume processed successfully!</h1>
-    <p>Your CSV has been saved on the server.</p>
-    <p><a href="{{ csv_link }}">Click here to download your CSV file.</a></p>
-    <p><a href="/">Upload another PDF</a></p>
+    <h1>Skill Gap Analysis Results</h1>
+    <div style="white-space: pre-wrap; border: 1px solid #888; padding:1em;">
+        {{ analysis | safe }}
+    </div>
+    <a href="{{ url_for('home') }}">Back</a>
 </body>
 
 </html>
